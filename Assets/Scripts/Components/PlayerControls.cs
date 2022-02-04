@@ -22,10 +22,14 @@ public class PlayerControls : MonoBehaviour
     private Rigidbody2D rb;
     private Collider2D selfCollider;
 
+    private AudioSource audioPlayer;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         selfCollider = GetComponent<Collider2D>();
+
+        audioPlayer = GameObject.FindGameObjectWithTag("MainAudio").GetComponent<AudioSource>();
 
         movement.performed += OnMovement;
         movement.canceled += OnMovement;
@@ -64,10 +68,12 @@ public class PlayerControls : MonoBehaviour
                 {
                     score += coinValue;
                     scoreDisplay.SetScore(score);
+                    audioPlayer.PlayOneShot(col.GetComponent<SfxList>().SelectClip());
                 }
                 else if (col.CompareTag("Skull"))
                 {
                     gameOver.Invoke();
+                    audioPlayer.PlayOneShot(col.GetComponent<SfxList>().SelectClip());
                 }
                 Destroy(col.gameObject);
             }

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Coin
   - Skull
+  - MainAudio
   layers:
   - Default
   - TransparentFX

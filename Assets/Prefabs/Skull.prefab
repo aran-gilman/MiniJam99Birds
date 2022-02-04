@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2000635275630244494}
   - component: {fileID: 2000635275630244495}
   - component: {fileID: 5893739579403538242}
+  - component: {fileID: -3114030296096791240}
   m_Layer: 0
   m_Name: Skull
   m_TagString: Skull
@@ -99,3 +100,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.25
+--- !u!114 &-3114030296096791240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000635275630244492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6444d0bbb269bdc45a8a27c2e9b70d68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: 384b62fbac744bf4d85d92925dbae6da, type: 3}
