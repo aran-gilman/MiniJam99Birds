@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ScrollObject : MonoBehaviour
@@ -11,6 +9,11 @@ public class ScrollObject : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+    }
+
+    private void OnEnable()
+    {
+        transform.position = Vector3.zero;
     }
 
     private void Update()

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class PlayerControls : MonoBehaviour
@@ -13,6 +14,10 @@ public class PlayerControls : MonoBehaviour
     public int maxY;
 
     public InputAction movement;
+
+    public UnityEvent gameOver;
+
+    public ScoreDisplay scoreDisplay;
 
     private Rigidbody2D rb;
     private Collider2D selfCollider;
@@ -58,10 +63,11 @@ public class PlayerControls : MonoBehaviour
                 if (col.CompareTag("Coin"))
                 {
                     score += coinValue;
+                    scoreDisplay.SetScore(score);
                 }
                 else if (col.CompareTag("Skull"))
                 {
-                    Debug.Log("Skull hit!");
+                    gameOver.Invoke();
                 }
                 Destroy(col.gameObject);
             }
@@ -71,6 +77,7 @@ public class PlayerControls : MonoBehaviour
     private void OnEnable()
     {
         movement.Enable();
+        transform.position = Vector3.right * transform.position.x;
     }
 
     private void OnDisable()
