@@ -113,6 +113,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clips:
-  - {fileID: 8300000, guid: 2295bfa126c88ff45b0069c5b47a7d95, type: 3}
-  - {fileID: 8300000, guid: bdd2b9c0f5003554cabdd1ea0daa6442, type: 3}
-  - {fileID: 8300000, guid: ca644d3e236919a4b959f495db792986, type: 3}
+  - {fileID: 8300000, guid: 285e90dd83920414ab56d33490be6a0d, type: 3}
+  - {fileID: 8300000, guid: ef75aac3d01a3d84197362532c7688c9, type: 3}
+  - {fileID: 8300000, guid: 3a8ec7a4b4570da409c9529170739a92, type: 3}
