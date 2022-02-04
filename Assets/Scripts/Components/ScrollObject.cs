@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class ScrollObject : MonoBehaviour
 {
     public float scrollSpeed = 1.0f;
