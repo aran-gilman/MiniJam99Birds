@@ -16,9 +16,13 @@ public class ScrollObject : MonoBehaviour
         transform.position = Vector3.right * x;
     }
 
-    private void Start()
+    private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+    }
+
+    private void OnEnable()
+    {
         rb.velocity = scrollSpeed * Vector3.left;
     }
 
