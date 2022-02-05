@@ -10,7 +10,33 @@ public class ScoreDisplay : MonoBehaviour
     public GameObject iconPrefab;
     public List<Sprite> starStages = new List<Sprite>();
 
-    public void SetScore(int score)
+    public void SetScore(int newScore)
+    {
+        score = newScore;
+        UpdateDisplayedScore();
+    }
+
+    public void IncrementScore()
+    {
+        SetScore(score + 1);
+    }
+
+    private int score;
+
+    private void Awake()
+    {
+        int x = 0;
+        for (int i = 0; i < starsDisplayed; i++)
+        {
+            GameObject go = Instantiate(iconPrefab, transform);
+            RectTransform rt = go.GetComponent<RectTransform>();
+            rt.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Left, x, rt.sizeDelta.x);
+            x += iconSpacing;
+        }
+        SetScore(0);
+    }
+
+    private void UpdateDisplayedScore()
     {
         int remainingScore = score;
         for (int i = 0; i < transform.childCount; i++)
@@ -27,18 +53,5 @@ public class ScoreDisplay : MonoBehaviour
                 remainingScore = 0;
             }
         }
-    }
-
-    private void Awake()
-    {
-        int x = 0;
-        for (int i = 0; i < starsDisplayed; i++)
-        {
-            GameObject go = Instantiate(iconPrefab, transform);
-            RectTransform rt = go.GetComponent<RectTransform>();
-            rt.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Left, x, rt.sizeDelta.x);
-            x += iconSpacing;
-        }
-        SetScore(0);
     }
 }

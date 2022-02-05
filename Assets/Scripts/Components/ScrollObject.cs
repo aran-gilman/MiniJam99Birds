@@ -1,32 +1,32 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class ScrollObject : MonoBehaviour
 {
     public float scrollSpeed = 1.0f;
+    public float endX = -110;
 
-    public bool autoReset = false;
-    public float resetAtX = -100.0f;
-    public float resetToX = 30.0f;
+    public UnityEvent endReached = new UnityEvent();
 
     private Rigidbody2D rb;
 
-    private void Awake()
+    public void SetPosition(float x)
     {
-        rb = GetComponent<Rigidbody2D>();
+        transform.position = Vector3.right * x;
     }
 
-    private void OnEnable()
+    private void Start()
     {
-        transform.position = Vector3.zero;
+        rb = GetComponent<Rigidbody2D>();
         rb.velocity = scrollSpeed * Vector3.left;
     }
 
     private void Update()
     {
-        if (transform.position.x < resetAtX)
+        if (transform.position.x < endX)
         {
-            transform.position = Vector3.right * resetToX;
+            endReached.Invoke();
         }
     }
 }

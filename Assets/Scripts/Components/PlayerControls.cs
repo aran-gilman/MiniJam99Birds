@@ -1,21 +1,15 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class PlayerControls : MonoBehaviour
 {
     public float maxVerticalSpeed = 1.0f;
-    public int score = 0;
-
-    public int coinValue = 1;
 
     public int minY;
     public int maxY;
 
     public InputAction movement;
-
-    public UnityEvent gameOver;
 
     public ScoreDisplay scoreDisplay;
 
@@ -60,21 +54,12 @@ public class PlayerControls : MonoBehaviour
         {
             foreach (Collider2D col in results)
             {
-                if (col == null)
+                if (col == null && !col.CompareTag("Coin"))
                 {
                     continue;
-                }    
-                if (col.CompareTag("Coin"))
-                {
-                    score += coinValue;
-                    scoreDisplay.SetScore(score);
-                    audioPlayer.PlayOneShot(col.GetComponent<SfxList>().SelectClip());
                 }
-                else if (col.CompareTag("Skull"))
-                {
-                    gameOver.Invoke();
-                    audioPlayer.PlayOneShot(col.GetComponent<SfxList>().SelectClip());
-                }
+                scoreDisplay.IncrementScore();
+                audioPlayer.PlayOneShot(col.GetComponent<SfxList>().SelectClip());
                 Destroy(col.gameObject);
             }
         }
