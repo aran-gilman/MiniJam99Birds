@@ -5,9 +5,13 @@ public class ScrollObject : MonoBehaviour
 {
     public float scrollSpeed = 1.0f;
 
+    public bool autoReset = false;
+    public float resetAtX = -100.0f;
+    public float resetToX = 30.0f;
+
     private Rigidbody2D rb;
 
-    private void Start()
+    private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
     }
@@ -15,10 +19,14 @@ public class ScrollObject : MonoBehaviour
     private void OnEnable()
     {
         transform.position = Vector3.zero;
+        rb.velocity = scrollSpeed * Vector3.left;
     }
 
     private void Update()
     {
-        rb.velocity = scrollSpeed * Vector3.left;
+        if (transform.position.x < resetAtX)
+        {
+            transform.position = Vector3.right * resetToX;
+        }
     }
 }

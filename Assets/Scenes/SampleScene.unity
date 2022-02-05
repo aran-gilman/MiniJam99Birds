@@ -582,7 +582,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 164b779db505f31438047273851cf800, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 2
+  scrollSpeed: 2.25
+  autoReset: 1
+  resetAtX: -110
+  resetToX: 20
 --- !u!114 &478968456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -598,7 +601,7 @@ MonoBehaviour:
   prefabs:
   - prefab: {fileID: 8953685037177981343, guid: 123352bd94858e74ab5216898135e422, type: 3}
     count: 10
-  min: {x: 0, y: -5}
+  min: {x: -10, y: -5}
   max: {x: 100, y: 5}
 --- !u!50 &478968457
 Rigidbody2D:
@@ -771,6 +774,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollSpeed: 2
+  autoReset: 0
+  resetAtX: -100
+  resetToX: 30
 --- !u!50 &859092260
 Rigidbody2D:
   serializedVersion: 4
@@ -1117,7 +1123,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1433392496}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.925318, y: -1.9715407, z: -2.3925955}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 478968454}
@@ -1328,6 +1334,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollSpeed: 0.5
+  autoReset: 1
+  resetAtX: -110
+  resetToX: 20
 --- !u!114 &1708085330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1343,7 +1352,7 @@ MonoBehaviour:
   prefabs:
   - prefab: {fileID: 1951691155857398769, guid: 78e4f74af977006498451a226df6340c, type: 3}
     count: 20
-  min: {x: 0, y: -5}
+  min: {x: -10, y: -5}
   max: {x: 100, y: 5}
 --- !u!50 &1708085331
 Rigidbody2D:
@@ -1412,6 +1421,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollSpeed: 1
+  autoReset: 1
+  resetAtX: -110
+  resetToX: 20
 --- !u!114 &1780862049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1427,7 +1439,7 @@ MonoBehaviour:
   prefabs:
   - prefab: {fileID: 704288646714788544, guid: b2bcba154056caf419a892ab16a65935, type: 3}
     count: 15
-  min: {x: 0, y: -5}
+  min: {x: 10, y: -5}
   max: {x: 100, y: 5}
 --- !u!50 &1780862050
 Rigidbody2D:
