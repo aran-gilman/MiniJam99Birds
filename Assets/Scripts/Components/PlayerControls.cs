@@ -37,7 +37,7 @@ public class PlayerControls : MonoBehaviour
         float dy = movement.ReadValue<float>();
         if (dy > 0)
         {
-            animator.SetTrigger("Flap");
+            //animator.SetTrigger("Flap");
             animator.SetInteger("Direction", 1);
             rb.velocity = dy * maxUpSpeed * Vector3.up;
         }

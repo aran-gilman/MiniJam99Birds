@@ -222,8 +222,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1b1c53b4e1ae64419bbf9ff852b56f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxUpSpeed: 1.5
-  maxDownSpeed: 2
+  maxUpSpeed: 3
+  maxDownSpeed: 5
   minY: -5
   maxY: 5
   movement:
@@ -347,7 +347,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 11926416}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 768a3132aff75304da8e6b39af33175d, type: 3}
   m_Name: 
