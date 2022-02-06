@@ -15,6 +15,7 @@ public class PlayerControls : MonoBehaviour
 
     private Rigidbody2D rb;
     private Collider2D selfCollider;
+    private Animator animator;
 
     private AudioSource audioPlayer;
 
@@ -22,6 +23,7 @@ public class PlayerControls : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         selfCollider = GetComponent<Collider2D>();
+        animator = GetComponent<Animator>();
 
         audioPlayer = GameObject.FindGameObjectWithTag("MainAudio").GetComponent<AudioSource>();
 
@@ -33,6 +35,10 @@ public class PlayerControls : MonoBehaviour
     {
         float dy = movement.ReadValue<float>();
         rb.velocity = dy * maxVerticalSpeed * Vector3.up;
+        if (dy > 0)
+        {
+            animator.SetTrigger("Flap");
+        }
     }
 
     private void Update()
