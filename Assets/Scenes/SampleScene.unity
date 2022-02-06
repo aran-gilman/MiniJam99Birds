@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 11926418}
   - component: {fileID: 11926417}
   - component: {fileID: 11926419}
+  - component: {fileID: 11926423}
   - component: {fileID: 11926420}
   - component: {fileID: 11926421}
   - component: {fileID: 11926422}
@@ -339,6 +340,36 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &11926423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11926416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 768a3132aff75304da8e6b39af33175d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseFileName: screenshot.png
+  takeScreenshot:
+    m_Name: Take Screenshot
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: e9632ba8-e220-4b4f-b2e2-affc8c2d55c6
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 3f46e969-044f-42bd-b54a-b703bf093ffc
+      m_Path: <Keyboard>/c
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Take Screenshot
+      m_Flags: 0
+    m_Flags: 0
 --- !u!1 &379507306
 GameObject:
   m_ObjectHideFlags: 0
