@@ -45,7 +45,8 @@ public class ScoreDisplay : MonoBehaviour
             if (remainingScore >= starStages.Count)
             {
                 childImage.sprite = starStages[starStages.Count - 1];
-                remainingScore -= starStages.Count;
+                // The first stage is the "empty" stage, so don't include it
+                remainingScore -= starStages.Count - 1;
             }
             else
             {

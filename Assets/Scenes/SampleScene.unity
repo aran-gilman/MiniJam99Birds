@@ -939,7 +939,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollSpeed: 2
-  endX: -120
+  endX: -115
   endReached:
     m_PersistentCalls:
       m_Calls:
