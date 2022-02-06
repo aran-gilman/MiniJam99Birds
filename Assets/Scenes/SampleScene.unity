@@ -579,8 +579,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 164b779db505f31438047273851cf800, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 2.25
-  endX: -110
+  scrollSpeed: 2.75
+  endX: -115
   endReached:
     m_PersistentCalls:
       m_Calls:
@@ -939,8 +939,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 164b779db505f31438047273851cf800, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 2
-  endX: -115
+  scrollSpeed: 2.5
+  endX: -215
   endReached:
     m_PersistentCalls:
       m_Calls:
@@ -1015,9 +1015,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabs:
   - prefab: {fileID: 8089499604149656239, guid: 6bf9575fb12af5c4ca5e8b9f47a98d9f, type: 3}
-    count: 50
+    count: 60
   min: {x: 0, y: -5}
-  max: {x: 100, y: 5}
+  max: {x: 200, y: 5}
 --- !u!1 &860842213
 GameObject:
   m_ObjectHideFlags: 0
@@ -1524,7 +1524,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 164b779db505f31438047273851cf800, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 0.5
+  scrollSpeed: 1
   endX: -110
   endReached:
     m_PersistentCalls:
@@ -1624,7 +1624,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 164b779db505f31438047273851cf800, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 1
+  scrollSpeed: 2
   endX: -110
   endReached:
     m_PersistentCalls:
