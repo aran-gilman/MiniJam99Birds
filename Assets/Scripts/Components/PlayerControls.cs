@@ -4,7 +4,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerControls : MonoBehaviour
 {
-    public float maxVerticalSpeed = 1.0f;
+    public float maxUpSpeed = 1.0f;
+    public float maxDownSpeed = 2.0f;
 
     public int minY;
     public int maxY;
@@ -34,15 +35,21 @@ public class PlayerControls : MonoBehaviour
     private void OnMovement(InputAction.CallbackContext ctx)
     {
         float dy = movement.ReadValue<float>();
-        rb.velocity = dy * maxVerticalSpeed * Vector3.up;
         if (dy > 0)
         {
             animator.SetTrigger("Flap");
             animator.SetInteger("Direction", 1);
+            rb.velocity = dy * maxUpSpeed * Vector3.up;
+        }
+        else if (dy < -0.001f)
+        {
+            animator.SetInteger("Direction", -1);
+            rb.velocity = dy * maxDownSpeed * Vector3.up;
         }
         else
         {
-            animator.SetInteger("Direction", dy > -0.001f ? 0 : -1);
+            animator.SetInteger("Direction", 0);
+            rb.velocity = Vector3.zero;
         }
     }
 

@@ -221,7 +221,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1b1c53b4e1ae64419bbf9ff852b56f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxVerticalSpeed: 2
+  maxUpSpeed: 1.5
+  maxDownSpeed: 2
   minY: -5
   maxY: 5
   movement:
