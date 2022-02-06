@@ -38,6 +38,11 @@ public class PlayerControls : MonoBehaviour
         if (dy > 0)
         {
             animator.SetTrigger("Flap");
+            animator.SetInteger("Direction", 1);
+        }
+        else
+        {
+            animator.SetInteger("Direction", dy > -0.001f ? 0 : -1);
         }
     }
 

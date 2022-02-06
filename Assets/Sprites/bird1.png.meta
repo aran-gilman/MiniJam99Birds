@@ -11,6 +11,12 @@ TextureImporter:
   - first:
       213: 8483018987832256505
     second: bird1_2
+  - first:
+      213: 5332392567549398838
+    second: bird1_3
+  - first:
+      213: -9147154507926953485
+    second: bird1_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -170,6 +176,48 @@ TextureImporter:
       bones: []
       spriteID: 9f7a2a013dcb9b570800000000000000
       internalID: 8483018987832256505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird1_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63f07b7b9c6700a40800000000000000
+      internalID: 5332392567549398838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird1_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f1a6615077ce0180800000000000000
+      internalID: -9147154507926953485
       vertices: []
       indices: 
       edges: []
